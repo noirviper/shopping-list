@@ -8,6 +8,7 @@ mainContainer.on('click keydown', 'button', function(event){
     event.preventDefault();
     if($(this).attr('type') === 'submit') {
         addItem($(listItem).val());
+        $(listItem).val(" ");
     } else if ($(this).hasClass("shopping-item-toggle")) {
         $(this).parent().parent().find(".shopping-item").toggleClass('shopping-item__checked');
     } else if ($(this).hasClass("shopping-item-delete")) {
